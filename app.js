@@ -1,5 +1,21 @@
 class Casino {
-    // Write code here
+    constructor(name){
+        this.name = name;
+        this.timesPlayed = 0;
+    }
+    playGame(betAmount){
+        this.timesPlayed += 1;
+        if(Math.random()<=0.5){
+            console.log(`${this.name} wins!`)
+        }
+        else {
+            console.log(`you won $${betAmount = betAmount * (this.timesPlayed)}!`)
+        }
+    }
+    rollDie(betamount){
+        const rolledSide = (Math.floor(Math.random() * 100) % 6) + 1;
+        console.log(`you rolled ${rolledSide}`)
+    }
 };
 
 // TESTS
